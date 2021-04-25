@@ -210,3 +210,6 @@ Test Plan and automation of a Test Case within it
 DUDAS:
 * Tengo que poner que hay que verificar si existen los elementos en cada ventana (botones, links...)? o directamente escribir casos de prueba en base a que existan dichs elementos
 * TEngo que poner algo con el CAPTCHA?
+* Donde pongo que sea web responsive?
+
+-- No hay documentacion, de alguna manera tengo que suponer cuales son los requisitos funcionales y no funcionales y hacer un test plan en base a eso (ejemplo: no se si tiene que ser una pagina responsiva o no, pero me invento que si)--
