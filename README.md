@@ -184,14 +184,19 @@ Test Plan and automation of a Test Case within it
 
     *   **Non Funtional**
 
-        * Timeout Login session
-        * Vulnerability to SQL inyection
-        * Verify whether all the text boxes have a minimum and maximum length.
-        * Verify that password stores in a database in an encrypted format
-        * Verify Automatic Login succesful when cookies are present
-        * Verify User is able to Login when cookies are cleared
-        * Login succesful with same credentials at different browsers at the same time
-        * Login failed with diferent credentials at same browser at the same time
+        * Verify whether all the text boxes have a minimum and maximum length
 
+        * **Security**
+            * Timeout Login session
+            * Vulnerability to SQL inyection
+            * Verify that password stores in a database in an encrypted format
+            * Verify Automatic Login succesful when cookies are present
+            * Verify User is able to Login when cookies are cleared
+            * Login succesful with same credentials at different browsers at the same time
+            * Login failed with diferent credentials at same browser at the same time
 
-        * Atelito.87
+        * **Performance**
+            * Baseline Test
+            * Load Test
+            * Endurance Test
+            * Stress Test
