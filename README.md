@@ -5,9 +5,9 @@ Test Plan &amp; Automation of one Test Case
 
 * Test Plan
 
-    *   _Functional_
+    *   **Functional**
 
-        *   _Login_
+        *   **Login**
             * Login succesful with Valid Credentials
             * Login failed with an invalid Username and invalid Password
             * Login failed with a Valid Username and invalid Password
@@ -26,8 +26,8 @@ Test Plan &amp; Automation of one Test Case
             * Login failed with old password after changing the password
             * Login succesfull in diferent browsers
 
-        *   _Task Board_
-            * _General_
+        *   **Task Board**
+            * **General**
                 * Verify Task Board contains TO DO, IN PROGRESS and DONE columns
                 * Verify Task Board contains Create and Refresh buttoms
                 * Verify Task Board contains Title, User Name, Notification, Task Board and All Tasks links
@@ -41,7 +41,7 @@ Test Plan &amp; Automation of one Test Case
                 * Verify that the Logout link is redirected to login/home page
 
             
-            * _Create Task_
+            * **Create Task**
                 * Verify modal tasks opens on click Create buttom
                 * Verify Cancel, Create buttoms elements are present
                 * Verify Drag and Drop funtionality works with pictures files
@@ -97,13 +97,13 @@ Test Plan &amp; Automation of one Test Case
                 * Verify that modal window on Help buttom contains Title, Keyboard shortcuts and Close buttom opens
                 
             
-        *   _Profile_
+        *   **Profile**
             * Verify that Title 
 
-        *   _All Tasks_
+        *   **All Tasks**
 
 
-    *   _Non Funtional_
+    *   **Non Funtional**
 
         * Timeout Login session
         * Simultaneous Logins
