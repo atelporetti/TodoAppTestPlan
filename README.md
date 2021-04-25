@@ -5,9 +5,9 @@ Test Plan &amp; Automation of one Test Case
 
 * Test Plan
 
-    *   Functional
+    *   *Functional*
 
-        *   Login
+        *   *Login*
             * Login succesful with Valid Credentials
             * Login failed with an invalid Username and invalid Password
             * Login failed with a Valid Username and invalid Password
@@ -19,7 +19,6 @@ Test Plan &amp; Automation of one Test Case
             * Verify password is in encrypted form (masked format) when entered
             * Verify that cursor is focused on the 'Email Address' text box on the page load
             * Verify that Login screen contains Username, Password, Login button & Forgot password link elements
-            * Verify that the logout link is redirected to login/home page
             * Verify that Enter key works as a substitute for the 'Login' button
             * Verify that Tab key works to move to the next input text field
             * Verify that Shift+Tab key works to move to the previous input text field
@@ -27,20 +26,22 @@ Test Plan &amp; Automation of one Test Case
             * Login failed with old password after changing the password
             * Login succesfull in diferent browsers
 
-        *   Task Board
+        *   *Task Board*
+            * *General*
+                * Verify Task Board contains TO DO, IN PROGRESS and DONE columns
+                * Verify Task Board contains Create and Refresh buttoms
+                * Verify Task Board contains Title, User Name, Notification, Task Board and All Tasks links
+                * Verify count of total tasks in TO DO column is correct
+                * Verify count of total tasks in IN PROGRESS column is correct
+                * Verify count of total tasks in DONE column is correct
+                * Verify it is possible to scroll on TO DO column when tasks cannot be displayed all on the same screen
+                * Verify it is possible to scroll on IN PROGRESS column when tasks cannot be displayed all on the same screen
+                * Verify it is possible to scroll on DONE column when tasks cannot be displayed all on the same screen
+                * Verify My Profile link opens modal window
+                * Verify that the Logout link is redirected to login/home page
 
-            * Verify Task Board contains TO DO, IN PROGRESS and DONE columns
-            * Verify Task Board contains Create and Refresh buttoms
-            * Verify Task Board contains Title, User, Notification, Task Board and All Tasks links
-            * Verify count of total tasks in TO DO column is correct
-            * Verify count of total tasks in IN PROGRESS column is correct
-            * Verify count of total tasks in DONE column is correct
-            * Verify it is possible to scroll on TO DO column when tasks cannot be displayed all on the same screen
-            * Verify it is possible to scroll on IN PROGRESS column when tasks cannot be displayed all on the same screen
-            * Verify it is possible to scroll on DONE column when tasks cannot be displayed all on the same screen
-            * Verify task number increases by one for every tasks created
             
-            * Create Task
+            * *Create Task*
                 * Verify modal tasks opens on click Create buttom
                 * Verify Cancel, Create buttoms elements are present
                 * Verify Drag and Drop funtionality works with pictures files
@@ -48,6 +49,7 @@ Test Plan &amp; Automation of one Test Case
                 * Verify Number input is disabled
                 * Task create failed when required input are blank
                 * Task create succesfull when required input is completed
+                * Verify task number increases by one for every tasks created
                 * Verify validation message is displayed when required fields are left in blank
                 * Verify Status field is set to 'To Do' by default
                 * Verify that cursor is focused on the 'Title' text box on create task modal
@@ -93,14 +95,15 @@ Test Plan &amp; Automation of one Test Case
                 * Verify that CTRL+ENTER keys works as a substitute for the 'Horizontal Rule' button
                 * Verify that Full Screen buttom works
                 * Verify that modal window on Help buttom contains Title, Keyboard shortcuts and Close buttom opens
-
                 
             
-        *   Profile
-        *   All Tasks
+        *   *Profile*
+            * Verify that Title 
+
+        *   *All Tasks*
 
 
-    *   Non Funtional
+    *   *Non Funtional*
 
         * Timeout Login session
         * Simultaneous Logins
