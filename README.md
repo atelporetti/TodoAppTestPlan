@@ -1,5 +1,5 @@
 # TodoAppTestPlan
-Test Plan &amp; Automation of one Test Case
+Test Plan and automation of a Test Case within it
 
 ## Table of contents
 
@@ -39,7 +39,6 @@ Test Plan &amp; Automation of one Test Case
                 * Verify it is possible to scroll on DONE column when tasks cannot be displayed all on the same screen
                 * Verify My Profile link opens modal window
                 * Verify that the Logout link is redirected to login/home page
-
             
             * **Create Task**
                 * Verify modal tasks opens on click Create buttom
@@ -96,9 +95,29 @@ Test Plan &amp; Automation of one Test Case
                 * Verify that Full Screen buttom works
                 * Verify that modal window on Help buttom contains Title, Keyboard shortcuts and Close buttom opens
                 
-            
         *   **Profile**
-            * Verify that Title 
+            * **General**
+                * Verify that information entered is not lost while changing between tabs
+            * **General Information**
+                * Verify that First Name is updated when Saved
+                * Verify that Last Name is updated when Saved
+                * Verify that email is updated when Saved
+                * Verify that communication emails are sent correctly when email is updated
+            * **Localization**
+                * Verify Last access updates when Timezone selection set to manual (I suppose that this has to change)
+                * Verify Last access updates when Timezone selection set to Automatic (I suppose that this has to change)
+                * Verify saved not permited when selecting 'Nothing selected' option
+            * **Security**
+                * Password change succesful with Valid Credentials
+                * Password change failed with Valid Current Password and Invalid New Password
+                * Password change failed with Invalid Current Password and Valid New Password
+                * Password change failed with Invalid Current Password and Invalid New Password
+                * Password change failed with Valid Current Password,  Valid New Password and Invalid Phone number
+                * Verify validation message is displayed on Invalid Current Password
+                * Verify validation message is displayed when New Passwords doesn't match
+                * Verify password is in encrypted form (masked format) when entered
+                * Verify Two Factor authentication is disabled by default
+                * Verify message, QR code and Phone number are displayed when Two Factor Authentication is enabled
 
         *   **All Tasks**
 
@@ -106,7 +125,6 @@ Test Plan &amp; Automation of one Test Case
     *   **Non Funtional**
 
         * Timeout Login session
-        * Simultaneous Logins
         * Vulnerability to SQL inyection
         * Verify whether all the text boxes have a minimum and maximum length.
         * Verify that password stores in a database in an encrypted format
@@ -114,3 +132,6 @@ Test Plan &amp; Automation of one Test Case
         * Verify User is able to Login when cookies are cleared
         * Login succesful with same credentials at different browsers at the same time
         * Login failed with diferent credentials at same browser at the same time
+
+
+        * Atelito.87
