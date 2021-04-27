@@ -36,7 +36,7 @@ As root or admin.
 
 $ npm install
 
-__$ npm run start__
+$ npm run start
 
 ```
 
