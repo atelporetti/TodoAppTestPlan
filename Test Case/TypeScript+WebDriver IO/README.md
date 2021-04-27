@@ -7,8 +7,6 @@ Mobile and API automation framework based on Cucumber - WebdriverIO - NodeJS - T
 
 *  [Pre-requisites](#Pre-requisites)
     +  [Installling NodeJS - Appium - JDK - Android Studio](#Configure-environment-variable)
-	+  [Configure environment variable](#Configure-environment-variable)
-	+  [Creating new virtual device](#Creating-new-virtual-device)
 +  [First time run](#First-time-run)
 
 *  [Folders structure](#Folders-structure)
@@ -28,69 +26,9 @@ Mobile and API automation framework based on Cucumber - WebdriverIO - NodeJS - T
 ## Getting started
 ### Pre-requisites
 
-- Clone Automation GIT project from Azure (https://dev.azure.com/ALC-Cosmos/AmericanLogistics/_git/test-automation)
 - Latest version of Node.js from the [official website](https://nodejs.org/) or using [nvm](https://github.com/creationix/nvm) (nvm approach is preferred).
 	-  If you install Node.js from the official website, you must check the 'Tools for Native Modules' checkbox during the installation (it is not checked by default)
-- Install Android Studio from the [official website](https://developer.android.com/studio).
-- Go to [official website JDK 1.8 ](https://www.oracle.com/sa/java/technologies/javase/javase-jdk8-downloads.html), go to *Java SE Development Kit* download and install the last version.
 - Lastest Appium Server version from the [official website](http://appium.io/).
-
-### Configure environment variable
-
-1. Right click the Computer icon.
-2. Choose Properties from the context menu.
-3. Click the Advanced system settings link.
-4. Click Environment Variables. 
-5. In the section System Variables, create or edit **"ANDROID_HOME"** variable and set path of Android sdk. For example
-```
-Name  : ANDROID_HOME
-Value : C:\Users\USERID\AppData\Local\Android\Sdk
-```
-6. In the section System Variables, create or edit **"JAVA_HOME"** variable and set path of Android sdk. For example
-```
-Name  : JAVA_HOME
-Value : C:\Program Files\Java\jdk1.8.0_241
-```
-
-7. In the section System Variables, create or edit **"path"** variable and set path of Android sdk platform-tools. For example
-```
-Name  : path
-Value : C:\Users\USERID\AppData\Local\Android\Sdk\platform-tools
-```
-8. In the section System Variables, create or edit **"path"** variable and set path of Android emulator. For example
-```
-Name  : path
-Value : C:\Users\USERID\AppData\Local\Android\Sdk\emulator
-```  
-**Creating new virtual device:**
--
-
-- **Create a new virtual device.**
-
-  - Open **Android Studio** and go to: **Tools** -> **AVD Manager** -> **Create Virtual Device...** 
-  - Select **Nexus 6** - > **Next** -> **API Level 10** -> **Next** -> Then rename device as Nexus 6 -> **Finish**. 
-
-**List of devices connected**
-
-With this command we can see a list of emualtors available on our local machine.
-
-```
-
-$ emulator -list-avds
-
-```
-
-**Open an emulator**
-
-We can open an emulator with the command **emulator** *@device_name* from the list of devices availables on local machine.
-For example:
-
-```
-
-$ emulator @Nexus_6
-
-```
-
 
 # First time run
 
@@ -99,7 +37,7 @@ As root or admin.
 
 $ npm install
 
-$ npm run clean-build
+__$ npm run start__
 
 ```
 
@@ -286,60 +224,19 @@ When(/^I complete email with "(.*?)"$/, (mail: string) => {
 });
 ```
 
-# **scripts**
-
-On this folder we have several file useful to excecute on GitHub Action.
-
-- runTest.sh: Install and run our set of test.
-- reportTest.sh: Generate allure report with evidence of the execution.
-
 # **commons**
 
 On this folder we have a few utility classes for example: **constants.ts**, **utils.ts**.
   
 
 
-
 # **package.json**
 
-Scripts desctiptions:
+Scripts descriptions:
 
+**@run** tag.
+- `npm run start`: this run all test cases on every .feature file that we have on our **config/wdio.app.config.js** on field specs and have to be releated to the stepDefinition files on cucumberOpts.require from the same config file. Also generates and shows the allure reports after an excecution.
 
-- `clean-build`: this script transpiles Typescript code and we need to excecute after we make a change on a ***.ts** file.
--  `app-test`: this run all test cases on every .feature file that we have on our **config/wdio.app.config.js** on field specs and have to be releated to the stepDefinition files on cucumberOpts.require from the same config file.
--  `app-test-tag`: The same that  `app-test` but with this script we only run the **scenarios** or **features** with **@run** tag.
-- `clean-report`: We generate the allure reports after an excecution.
+**Credits**
 
-
-
-
-
-# **Contributing**
-
-  
-
-### Commits:
-
-  
-
-For our commits message we use [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) specification which provides an easy set of rules for creating an explicit commit history adding readable meaning to commit messages.
-
-  
-
-> See [Conventional Commits full specification](https://www.conventionalcommits.org/en/v1.0.0/#specification).
-
-  
-
-#  **Process**
-
-  
-
-1. Fork from `master` branch.
-
-2. Create your branch with the associated Jira ticket  (`git checkout -b type/####-Description`)
-
-3. Commit your changes (`git commit -am 'feat(feature):'`)
-
-4. Push to the branch (`git push origin type/####-Description`)
-
-5. Create new Pull Request
+- Automation GIT project from Azure (https://dev.azure.com/ALC-Cosmos/AmericanLogistics/_git/test-automation)

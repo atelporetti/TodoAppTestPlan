@@ -11,9 +11,7 @@
     "appium-chrome": "appium --allow-insecure chromedriver_autodownload",
     "web": "wdio ./config/wdio.web.config.js --cucumberOpts.tagExpression \"@run\"",
     "report": "allure generate ./allure-results",
-    "start": "npm run clean-build && npm run web",
-    "clean-report": "allure generate --clean ./allure-results",
-    "open-report": "allure open"
+    "start": "npm run clean-build && npm run web && allure generate --clean ./allure-results && allure open"
   },
   "keywords": [
     "appium",

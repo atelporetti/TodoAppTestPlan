@@ -30,4 +30,5 @@ Then(/^user enters the application$/, () => {
             timeout: 20000,
             timeoutMsg: 'expected url to be different after 20s'
         });
+    expect(browser.getUrl()).to.be.equal(taskBoard.taskBoardUrl())
 });
