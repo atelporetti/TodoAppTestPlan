@@ -6,7 +6,6 @@ Mobile and API automation framework based on Cucumber - WebdriverIO - NodeJS - T
 ## Table of contents
 
 *  [Pre-requisites](#Pre-requisites)
-    +  [Installling NodeJS - Appium - JDK - Android Studio](#Configure-environment-variable)
 +  [First time run](#First-time-run)
 
 *  [Folders structure](#Folders-structure)
