@@ -3,7 +3,7 @@ Test Plan and automation of a Test Case within it
 
 ## Table of contents
 
-* Test Plan
+* **Test Plan**
 
     *   **Functional**
 
