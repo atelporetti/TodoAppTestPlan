@@ -296,7 +296,15 @@ Test Plan and automation of a Test Case within it
             * Endurance Test
             * Stress Test
 
+<<<<<<< HEAD
 _Comments: I have grouped the Test Cases of Create Task and Profile separately for each window (Task Board and All Tasks) accordingly with the Page Object Model approach used._
 
 
 # Test Case
+=======
+_Comments: I have grouped the Test Cases of Create Task and Profile separately for each window (Task Board and All Tasks). In this way, according to the Page Object Model, there would be two different pages but the script would be the same initially, although it could easily grow and be modified as needed._
+
+# Test Case
+
+![TestCase](https://user-images.githubusercontent.com/69491395/116438670-0cfb8a80-a825-11eb-9f93-1fdc0f179bd6.png)
+>>>>>>> 5e05d7dda945dcab6cb6d1877b7b1d30604fb48a
