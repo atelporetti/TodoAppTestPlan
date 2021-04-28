@@ -7,7 +7,7 @@ export class TaskBoardPO {
     private taskBoard_modal_CreateTask_button: string;
 
     constructor() {
-        this.url = 'https://simpletaskmanager.slingrs.io/dev/runtime/#views/5c9a9451413c580009d6b68b';
+        this.url = 'https://simpletaskmanager.slingrs.io/dev/runtime/#views/';
         this.taskBoard_title_label =  '#card-header-title';
         this.taskBoard_create_button =  "//button[contains(@class,'btn-success')]/span[text()='Create']";
         this.taskBoard_task_label = "//span[text()='To Do']/../../div[contains(@class,'card-view')]/div[@class='card']/div[@class='card-body' and text()='TASK_NAME']";

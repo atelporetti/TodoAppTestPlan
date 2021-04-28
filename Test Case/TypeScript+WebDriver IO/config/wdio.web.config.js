@@ -12,7 +12,7 @@ const commandTimeout = 6000;
 exports.config = {
     debug: false,
     specs: [
-        './features/create_task.feature'
+        './features/task_board.feature'
     ],
 
     reporters: ['allure', 'spec'],

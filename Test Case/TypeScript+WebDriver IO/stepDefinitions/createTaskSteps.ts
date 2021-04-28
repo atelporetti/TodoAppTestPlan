@@ -5,29 +5,29 @@ import { TaskBoardPO } from '../pages/taskBoardPO';
 const taskBoard: TaskBoardPO = new TaskBoardPO();
 var title_task = '';
 
-Given(/^Task Board is displayed$/, () => {
+Given(/^user is in Task Board panel$/, () => {
     taskBoard.validatePage();
 });
 
-When(/^clicks on the Create button$/, () => {
+When(/^user clicks on Create button$/, () => {
     taskBoard.taskBoardCreateButtom().click();
 });
 
-When(/^opens create task window$/, () => {
-    taskBoard.taskBoardTitleLabel().waitForExist();
+Then(/^user is able to see the create task modal window$/, () => {
+    expect(taskBoard.taskBoardModalTitleTaskInput()).to.exist;
 });
 
-When(/^task title field is completed with "(.*?)"$/, (title: string) => {
+When(/^user completes the requiered field with the following information: "(.*?)"$/, (title: string) => {
     title_task = title;
     taskBoard.taskBoardModalTitleTaskInput().setValue(title);
 });
 
-When(/^press the Create button$/, () => {
+When(/^user clicks on create button$/, () => {
     taskBoard.taskBoardModalCreateTaskButtom().waitForExist();
     taskBoard.taskBoardModalCreateTaskButtom().click();
 });
 
-Then(/^task is displayed in 'To Do' column$/, () => {
+Then(/^user is able to see the new task created in 'To Do' column$/, () => {
     taskBoard.taskBoardTaskLabel(title_task).waitForExist();
     expect(taskBoard.taskBoardTaskLabel(title_task).getText()).to.be.equal(title_task);
 });

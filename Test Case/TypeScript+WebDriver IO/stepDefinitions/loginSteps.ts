@@ -6,29 +6,23 @@ import { TaskBoardPO } from '../pages/taskBoardPO';
 const login: LoginPO = new LoginPO();
 const taskBoard: TaskBoardPO = new TaskBoardPO();
 
-Given(/^user in login page$/, () => {
+Given(/^user is in login page$/, () => {
     browser.url(login.loginUrl());
     login.validatePage();
 });
 
-When(/^email field is completed with "(.*?)"$/, (email: string) => {
+When(/^user enters "(.*?)" as email in email field and "(.*?)" as password in password field and user clicks on 'Login' button$/, (email: string, password: string) => {
     login.loginEmailInput().setValue(email);
-});
-
-When(/^password field is completed with "(.*?)"$/, (password: string) => {
     login.loginPasswordInput().setValue(password);
-});
-
-When(/^press the 'Login' button$/, () => {
     login.loginLoginButtom().click();
 });
 
 Then(/^user enters the application$/, () => {
     browser.waitUntil(
-        () => browser.getUrl() == taskBoard.taskBoardUrl(),
+        () => browser.getUrl().includes(taskBoard.taskBoardUrl()),
         {
             timeout: 20000,
             timeoutMsg: 'expected url to be different after 20s'
         });
-    expect(browser.getUrl()).to.be.equal(taskBoard.taskBoardUrl())
+    expect(browser.getUrl().includes(taskBoard.taskBoardUrl()));
 });

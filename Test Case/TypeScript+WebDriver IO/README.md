@@ -31,7 +31,7 @@ Mobile and API automation framework based on Cucumber - WebdriverIO - NodeJS - T
 
 # First time run
 
-As root or admin.
+As root or admin in folder: Test Case\TypeScript+WebDriver IO
 ```
 
 $ npm install
