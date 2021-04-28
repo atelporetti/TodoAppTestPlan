@@ -11,13 +11,16 @@ Given(/^user is in login page$/, () => {
     login.validatePage();
 });
 
-When(/^user enters "(.*?)" as email in email field and "(.*?)" as password in password field and user clicks on 'Login' button$/, (email: string, password: string) => {
+When(/^user enters "(.*?)" as email in email field and "(.*?)" as password in password field$/, (email: string, password: string) => {
     login.loginEmailInput().setValue(email);
     login.loginPasswordInput().setValue(password);
+});
+
+When(/^user clicks on Login button$/, () => {
     login.loginLoginButtom().click();
 });
 
-Then(/^user enters the application$/, () => {
+Then(/^user is logged in to the application$/, () => {
     browser.waitUntil(
         () => browser.getUrl().includes(taskBoard.taskBoardUrl()),
         {

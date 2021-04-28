@@ -17,7 +17,7 @@ Then(/^user is able to see the create task modal window$/, () => {
     expect(taskBoard.taskBoardModalTitleTaskInput()).to.exist;
 });
 
-When(/^user completes the requiered field with the following information: "(.*?)"$/, (title: string) => {
+When(/^user enters "(.*?)" as Title$/, (title: string) => {
     title_task = title;
     taskBoard.taskBoardModalTitleTaskInput().setValue(title);
 });
@@ -27,7 +27,7 @@ When(/^user clicks on create button$/, () => {
     taskBoard.taskBoardModalCreateTaskButtom().click();
 });
 
-Then(/^user is able to see the new task created in 'To Do' column$/, () => {
+Then(/^user is able to see the new task created in To Do column$/, () => {
     taskBoard.taskBoardTaskLabel(title_task).waitForExist();
     expect(taskBoard.taskBoardTaskLabel(title_task).getText()).to.be.equal(title_task);
 });
