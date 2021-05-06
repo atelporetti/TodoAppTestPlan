@@ -3,7 +3,7 @@ Feature: Create Task
 
     Background: Login
         Given user is in login page
-        When user enters "aaxelporetti@gmail.com" as email in email field and "atel12345" as password in password field
+        When user enters "user@gmail.com" as email in email field and "passwordTest" as password in password field
         And user clicks on Login button
         Then user is logged in to the application
 
